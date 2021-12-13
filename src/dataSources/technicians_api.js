@@ -11,8 +11,8 @@ return await this.post('/technicians/',technician);
  }
 
 async receiveTechnician(select) {
-request = new Object(JSON.parse(JSON.stringify(select)));   
-return await this.get(`/technicians/`,request);
+let query_params = new Object(JSON.parse(JSON.stringify(select)));   
+return await this.get(`/technicians/`,query_params);
      }
 
 

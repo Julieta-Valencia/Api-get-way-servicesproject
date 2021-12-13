@@ -5,24 +5,33 @@ const cotTypeDefs = gql `
 
 input CotizacionInput{
         
-    localidad:String
-    Categoria:String
-    Servicio:String
+    localidad: String!
+    Categoria: String!
+    Servicio: String!
 
 }
 
-Type Cotizacion {
-       
+input service{
+        
+ 
+  concept: String!
+  price: Int!
+
+}
+
+type Cotizacion {
+        
+        id: String!
         concept: String!
         price: Int!
         }
 
 type Mutation{
          
-  CreateCoti(cot:CotizacionInput):Cotizacion!
-    
-    
-       }
+    CreateService(ser: service!):Cotizacion!
+            
+   }        
+
 
 
 type Query{
@@ -30,5 +39,5 @@ type Query{
   searchCoti(concept:String):Cotizacion!    
 
 }
-       `;
-module.export = cotTypeDefs;
+ `;
+module.exports = cotTypeDefs;

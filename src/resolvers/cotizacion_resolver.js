@@ -7,13 +7,12 @@ const cotizacion_resolver= {
      },
      Mutation: {
       
-        CreateCoti: async(_, { cot }, { dataSources}) => {
-        return await dataSources.cotizacionAPI.createCotizacion(cot);
-
-
-
- }   
+        CreateService: async(_, { ser }, { dataSources}) => {
+        return await dataSources.cotizacionAPI.createCotizacion(ser);
+    },
+       
  }
+    
 
 };
 module.exports =cotizacion_resolver;

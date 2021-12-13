@@ -8,7 +8,7 @@ this.baseURL = serverConfig.service_api_url;
 async createService(service) {
 service = new Object(JSON.parse(JSON.stringify(service)));
 return await this.post('/createUser/',service);
- }
+}
 }
 module.exports = serviceAPI;
 

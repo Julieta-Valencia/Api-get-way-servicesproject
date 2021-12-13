@@ -7,7 +7,7 @@ input ServiceInput{
             lastnames: String!
             locality:  String!
             address: String!
-            telephone: Int!
+            telephone: String!
             email: String!      
             tech_id: Int!
             module: String!
@@ -20,8 +20,8 @@ input ServiceInput{
 }
 
 type Service{
-            message:String!
-            service_Id:Int!
+            message: String!
+            service_id: Int!
 }
 
 
